@@ -1,5 +1,6 @@
 package com.example.socialnetwork.model;
 
+import com.example.socialnetwork.dto.ContactDTO;
 import com.example.socialnetwork.enums.Type;
 import jakarta.persistence.*;
 
@@ -16,4 +17,14 @@ public class Contact {
 
     private String ddd;
     private String number;
+
+    public Contact(ContactDTO contactDTO) {
+        this.type = Type.valueOf(contactDTO.type());
+        this.ddd = contactDTO.ddd();
+        this.number = contactDTO.number();
+    }
+
+    public Contact() {
+
+    }
 }
