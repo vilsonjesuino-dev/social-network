@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 
 @Table(name = "contact")
 @Entity(name = "contact")
+@Embeddable
 public class Contact {
 
     @Id

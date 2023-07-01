@@ -3,8 +3,8 @@ package com.example.socialnetwork.model;
 import com.example.socialnetwork.dto.AccountDTO;
 import jakarta.persistence.*;
 
+@Entity
 @Table(name = "account")
-@Entity(name = "account")
 public class Account {
 
     @Id
@@ -14,13 +14,13 @@ public class Account {
     private String email;
     private String userName;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Contact contact;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Country country;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Language language;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Question question;
 
     public Account(AccountDTO accountDTO) {

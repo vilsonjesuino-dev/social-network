@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 @Table(name = "country")
 @Entity(name = "country")
+@Embeddable
 public class Country {
 
     @Id
