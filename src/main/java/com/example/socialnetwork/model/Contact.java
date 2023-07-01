@@ -4,9 +4,8 @@ import com.example.socialnetwork.dto.ContactDTO;
 import com.example.socialnetwork.enums.Type;
 import jakarta.persistence.*;
 
+@Entity
 @Table(name = "contact")
-@Entity(name = "contact")
-@Embeddable
 public class Contact {
 
     @Id

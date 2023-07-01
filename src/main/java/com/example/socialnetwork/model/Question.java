@@ -3,9 +3,8 @@ package com.example.socialnetwork.model;
 import com.example.socialnetwork.dto.QuestionDTO;
 import jakarta.persistence.*;
 
+@Entity
 @Table(name = "question")
-@Entity(name = "question")
-@Embeddable
 public class Question {
 
     @Id
